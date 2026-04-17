@@ -10,7 +10,7 @@ def test_all_locators(page: Page) :
     #expect(page.get_by_role("img", name="robot icon")).to_be_visible()
     #expect(page.get_by_role("button", name="Implicit Button")).to_be_visible()
     #expect(page.get_by_role("link", name="Implicit Link")).to_be_visible()
-    #time.sleep(3)
+
 
     #get by text
     #expect(page.get_by_text("Locate elements by their visible text content.", exact=True)).to_be_visible()
@@ -20,10 +20,13 @@ def test_all_locators(page: Page) :
     # expect(page.get_by_label("Email Address", exact=True)).to_be_visible()
     # page.get_by_label("Accept Terms and Conditions").click()
     # expect(page.get_by_label("Accept Terms and Conditions", exact=True)).to_be_visible()
-    # time.sleep(3)
+
 
     #get_by_placeholder
-    time.sleep(2)
-    page.get_by_placeholder("Search for items...").click()
-    time.sleep(2)
-    page.get_by_placeholder("Enter your password").fill("MinhaSenha")
+    #page.get_by_placeholder("Search for items...").click()
+    # time.sleep(2)
+    #page.get_by_placeholder("Enter your password").fill("MinhaSenha")
+
+    #get_by_alt_text
+    expect(page.get_by_alt_text("python logo")).to_be_visible()
+    expect(page.get_by_alt_text("javascript logo")).to_be_visible()
