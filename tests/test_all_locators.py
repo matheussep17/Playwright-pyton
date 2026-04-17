@@ -28,5 +28,13 @@ def test_all_locators(page: Page) :
     #page.get_by_placeholder("Enter your password").fill("MinhaSenha")
 
     #get_by_alt_text
-    expect(page.get_by_alt_text("python logo")).to_be_visible()
-    expect(page.get_by_alt_text("javascript logo")).to_be_visible()
+    # expect(page.get_by_alt_text("python logo")).to_be_visible()
+    # expect(page.get_by_alt_text("javascript logo")).to_be_visible()
+
+    #get_by_title
+    # expect(page.get_by_title("Save your changes")).to_be_visible()
+    # expect(page.get_by_title("Go to homepage")).to_be_visible()
+
+    #get_by_test_id
+    expect(page.get_by_test_id("submit-button")).to_be_visible()
+    expect(page.get_by_test_id("status-message")).to_be_visible()
